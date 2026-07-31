@@ -1,6 +1,23 @@
+
+body{
+background-color: whitesmoke;
+font-family: "Inter", sans-serif;
+margin: 0;
+
+}
+
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: antiquewhite;
+  border-bottom: 2px solid lightgray;
+  margin: 0;
+
 }
 
 .HES{ 
@@ -15,6 +32,7 @@
   .HEI { 
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 100px;
     height: 50px;
     border-left: 1px solid lightgray ;
@@ -27,15 +45,23 @@
     font-weight: bold;
     font-style: italic;
     font-size: 36px;
+    margin-left: -10px;
     
   }
 
-  .navigation ul{
+.navigation {
+  flex: 1;
+  min-width: 0;
+}
 
+.navigation ul {
   display: flex;
-  align-items: end;
+  flex-wrap: nowrap;
+   
+  flex: 1 1 0;
   list-style: none;
   margin: 0;
+  margin-left: 70px;
   padding: 0;
 
   border: 1px solid lightgray;
@@ -43,19 +69,105 @@
   overflow: hidden;
   }
 
-  .navigation a {
-  display: block;
-  padding: 16px 24px;
+ .navigation li {
+    flex: 1 1 0;
+    min-width: 0;
+}
 
+.navigation a {
+  display: block;
+  padding: 16px 12px;
+  text-align: center;
   color: black;
   text-decoration: none;
-  font-weight: 600;
-  white-space: nowrap;}
+  font-size: 10px;
+  flex: 1 1 0;
+  min-width: 0;
+}
 
-  .navigation li + li {
+
+
+.navigation li + li {
   border-left: 1px solid lightgray;
 }
 
 .navigation a:hover {
-  background-color: #f3f3f3;
-  color: #a82232;}
+  background-color: rgb(234, 214, 189);
+  color: rgb(220, 0, 105);}
+  
+  .hero {
+
+    display: flex;
+    margin-top: 0;
+    flex: 1 1 0;
+    min-width: 0;
+    align-items: stretch;
+    background-color: azure;
+    
+  }
+
+.message,
+.coverpic {
+  flex: 1;
+  min-width: 0;
+}
+  .message {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 10px;
+    padding-left: 20px;
+    padding: clamp(0px, 4vw, 60px); /* permet d'être responsive */
+}
+.message p {
+    margin: 6px 0;
+  font-size: clamp(2px, 1.2vw, 19px);
+  line-height: 1.35;
+}
+.coverpic {
+    flex: 1; 
+    margin-bottom: 0;
+    position: relative;/* point de référence pour les éléments à l'intérieur */
+    overflow: hidden;/* coupe ce qui dépasse */
+ 
+    }
+
+.coverpic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    object-fit: cover;/* remplir sans déformer */
+    position: absolute; /* force l’image à toucher */
+    inset: 0;
+}
+  h1{
+  margin: 0 0 20px;
+  font-size: clamp(3px, 5vw, 56px);
+  line-height: 1.05;
+  }
+
+  .top h2 {
+   text-align: center;
+   display: block;
+  }
+  
+  .top h2::after{
+    content: ""; /* crée un élément vide avec la commande afre on le crée juste après */
+    text-align: center;
+    display: block;
+    width: 50px;
+    height: 4px;
+    margin: 12px auto 0;
+    background-color: brown;
+    border-radius: 999px;
+  }
+
+  .top li{
+      text-decoration: none;
+      list-style: none;
+      
+
+
+  }
