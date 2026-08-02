@@ -1,6 +1,6 @@
 
 body{
-background-color: whitesmoke;
+background-color: rgb(251, 244, 246);
 font-family: "Inter", sans-serif;
 margin: 0;
 
@@ -76,8 +76,8 @@ margin: 0;
 
  .navigation li {
   display: flex;
-    flex: 1 0 50px;
-    min-width: 0;
+    flex: 1 0 5px;
+    min-width: 90px;
    
 }
 
@@ -135,6 +135,8 @@ margin: 0;
     margin: 6px 0;
   font-size: clamp(2px, 1.2vw, 19px);
   line-height: 1.35;
+  margin: 0.2rem 0;
+  text-align: justify;
 }
 .coverpic {
     flex: 1; 
@@ -182,12 +184,16 @@ margin: 0;
   }
 
   .cards ul {
-    width: 100%;
-    height: 75px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-   margin: 0;
+  width: 100%;
+  min-height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  gap: 14px;
+  padding: 24px 16px 12px;
+      
+
   text-align: center;
   color: black;
   text-decoration: none;
@@ -196,22 +202,116 @@ margin: 0;
   min-width: 0;
   font-size: clamp(0.1px, 1.2vw, 1.1rem);
   overflow: hidden;
-  background-color: aqua;
 
   
   }
  .cards li{
-background-color: beige;
- min-width: 120px;
+
+ 
  display: flex;
- justify-content: center;
  font-weight: 600;
+  justify-content: flex-start;
+
+ flex: 1;
+    min-height: 0;
+       padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    border-radius: 20px;
 
  }
 
-.cards .chiffres {
-  background-color: beige;
- 
-  ;
+.cards h3 {
+    margin: 4px 0;
+}
 
+.cards p {
+    margin: 0;
+}
+
+.fleche {
+    margin-top: 6px;
+    line-height: 1.2;
+    text-decoration: none; /* évite que ça souligne le lien (la flèche) */
+      color: inherit;  /* le texte garde la même couleur quand le lien a été visité */
+}
+ 
+  .chiffres {
+    background-color: rgb(240, 227, 243);
+}
+
+.représentations {
+    background-color: rgb(252, 232, 236);
+}
+
+.actions {
+    background-color: rgb(231, 241, 235);
+}
+
+.ressources {
+    background-color: rgb(253, 239, 214);
+}
+
+.cards .chiffres h3,
+.cards .chiffres .fleche {
+  color:rgb(139, 89, 192)
+}
+
+.cards .représentations h3,
+.cards .représentations .fleche {
+  color: rgb(205, 90, 127);
+}
+
+.cards .actions h3,
+.cards .actions .fleche  {
+  color: rgb(94, 162, 134);
+}
+
+.cards .ressources h3,
+.cards .ressources .fleche  {
+  color: rgb(232, 179, 70);
+}
+
+.icone {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    border: 1px solid #b18be0;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 17px;
+
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chiffres .icone {
+    color: rgb(139, 89, 192);
+    border-color: rgb(139, 89, 192);
+}
+
+.représentations .icone {
+    color: rgb(205, 90, 127);
+    border-color: rgb(205, 90, 127);
+}
+
+.actions .icone {
+    color: rgb(94, 162, 134);
+    border-color: rgb(94, 162, 134);
+}
+
+.ressources .icone {
+    color: rgb(232, 179, 70);
+    border-color: rgb(232, 179, 70);
 }
