@@ -2,8 +2,8 @@
 body{
 background: radial-gradient(
     circle at left center,
-    rgb(193, 165, 207) 0%,
-    rgb(233, 215, 238) 30%,
+    rgb(183, 218, 245) 0%,
+    rgb(222, 239, 250) 30%,
     white 100%
 );
 font-family: "Inter", sans-serif;
@@ -11,6 +11,23 @@ margin: 0;
 
 }
 
+.page-chiffres {
+    background: radial-gradient(
+        circle at left center,
+        rgb(245, 204, 216) 0%,
+        rgb(252, 233, 238) 30%,
+        white 100%
+    );
+}
+.page-actions{
+background: radial-gradient(
+    circle at left center,
+    rgb(206, 229, 219) 0%,
+    rgb(233, 244, 238) 30%,
+    white 100%
+);
+
+}
 .header {
   display: flex;
   flex-direction: row;
@@ -298,7 +315,7 @@ margin: 0;
     position: absolute;
     top: 8px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* centre les icones proportionnellement par rapport à la largeur */
 }
 
 .chiffres .icone {
@@ -499,4 +516,201 @@ margin: 0;
 .footer-bouton:hover{
     transform:translateY(-2px);
     box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+/* VERSION TABLETTE / PETIT ÉCRAN */
+@media (max-width: 1050px) {
+
+    .header {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navigation {
+        flex-basis: 100%;
+    }
+
+    .navigation ul {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .navigation li {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .navigation a {
+        padding: 12px 6px;
+        font-size: 14px;
+        
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .stat {
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .stat > div:last-child {
+        flex: 1;
+        min-width: 0;
+    }
+}
+/* =========================
+   VERSION TABLETTE / MOBILE
+   ========================= */
+
+@media (max-width: 768px) {/* Applique les règles que quand l'écran est plus petit que la taille indiquée */
+
+    /* HEADER */
+
+    .header {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .HEI {
+        width: auto;
+        height: auto;
+        font-size: 13px;
+    }
+
+    .ISC {
+        font-size: 28px;
+        margin-left: 5px;
+    }
+
+    .navigation {
+        flex-basis: 100%;
+    }
+
+    .navigation ul {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navigation li {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .navigation a {
+        padding: 10px 4px;
+        font-size: 11px;
+        overflow-wrap: normal; /*Évite autant que possible de casser les mots n’importe où.*/
+    }
+
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .message {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: clamp(30px, 9vw, 44px);
+        line-height: 1.05;
+    }
+
+    .message p {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .coverpic {
+        min-height: 280px;
+    }
+
+
+    /* CARTES */
+
+    .cards ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+
+        width: auto;
+        padding: 25px 15px;
+        overflow: visible;
+
+        font-size: 14px;
+    }
+
+    .cards li {
+        min-height: 170px;
+        padding: 55px 12px 18px;
+    }
+
+    .cards h3 {
+        font-size: 16px;
+    }
+
+    .cards p {
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+
+    /* APERÇU */
+
+    .apercu {
+        flex-direction: column;
+    }
+
+    .bloc-apercu {
+        padding: 30px 20px;
+    }
+
+    .bloc-apercu + .bloc-apercu {
+        border-left: none;
+        border-top: 1px solid lightgray;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .stat {
+        width: 100%;
+    }
+
+    .stat h3 {
+        font-size: 25px;
+    }
+
+    .liste-representations li {
+        padding: 12px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        margin: 30px 15px;
+        padding: 30px 20px;
+
+        text-align: center;
+    }
+
+    .footer-bouton {
+        margin-left: 0;
+    }
 }
