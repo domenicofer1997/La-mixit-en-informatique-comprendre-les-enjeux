@@ -548,21 +548,17 @@ background: radial-gradient(
     font-weight: bold;
     transition: .2s;
     text-align: center;
-        flex-shrink:0;
+    flex-shrink: 1;
 
 }
 
 .footer-texte{
     flex:1;
-    justify-content: center;
-}
-.footer-bouton-gauche {
-    margin-right: auto;
 }
 
-.footer-bouton:last-child {
-    margin-left: auto;
-}
+
+
+
 .footer-bouton:hover{
     transform:translateY(-2px);
     box-shadow:0 8px 18px rgba(0,0,0,.2);
