@@ -950,6 +950,476 @@ background: radial-gradient(
     font-size: 14px;
     line-height: 1.35;
 }
+
+/* =====================================================
+   PAGE : LES ACTIONS
+   ===================================================== */
+
+
+/* SECTION GÉNÉRALE */
+
+.actions-section,
+.actions-propositions {
+    padding:
+        clamp(45px, 6vw, 80px)
+        clamp(20px, 5vw, 70px);
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TITRES DES SECTIONS
+   ===================================================== */
+
+.actions-titre-section {
+    max-width: 900px;
+    margin-bottom: 40px;
+}
+
+.actions-surtitle {
+    margin: 0 0 8px;
+
+    color: rgb(94, 162, 134);
+
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.actions-titre-section h2 {
+    margin: 0 0 18px;
+
+    color: rgb(28, 32, 45);
+
+    font-size: clamp(28px, 3.5vw, 46px);
+    line-height: 1.15;
+}
+
+.actions-titre-section > p:last-child {
+    max-width: 800px;
+
+    margin: 0;
+
+    color: rgb(53, 56, 68);
+
+    font-size: clamp(15px, 1.2vw, 18px);
+    line-height: 1.6;
+}
+
+
+
+/* =====================================================
+   ACTIONS EXISTANTES
+   ===================================================== */
+
+.actions-section {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.actions-grille {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* UNE CARTE */
+
+.action-carte {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+
+    padding:
+        28px
+        22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgb(246, 252, 249),
+            white
+        );
+
+    border:
+        1px solid
+        rgb(210, 231, 220);
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.action-carte:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* ICÔNE */
+
+.action-icone {
+
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    color: rgb(65, 139, 109);
+
+    background-color: rgb(225, 241, 233);
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+
+/* TITRE CARTE */
+
+.action-carte h3 {
+
+    margin:
+        0
+        0
+        15px;
+
+    color: rgb(47, 112, 86);
+
+    font-size: clamp(17px, 1.4vw, 21px);
+    line-height: 1.3;
+}
+
+
+/* TEXTE CARTE */
+
+.action-carte p {
+
+    margin: 0;
+
+    color: rgb(52, 55, 67);
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+
+/* PETIT LABEL EN BAS */
+
+.action-carte .action-exemple {
+
+    margin-top: auto;
+    padding-top: 20px;
+
+    color: rgb(94, 162, 134);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+
+/* =====================================================
+   PROPOSITIONS EXPERTS
+   ===================================================== */
+
+.actions-propositions {
+
+    border-top:
+        1px solid
+        rgb(220, 228, 224);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(233, 244, 238, 0.8),
+            rgba(255, 255, 255, 0.7)
+        );
+}
+
+
+/* GRILLE 2 COLONNES */
+
+.propositions-grille {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        20px
+        30px;
+}
+
+
+/* UNE PROPOSITION */
+
+.proposition {
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding:
+        25px;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    border:
+        1px solid
+        rgba(94, 162, 134, 0.25);
+
+    border-radius:
+        15px;
+
+    box-sizing: border-box;
+}
+
+
+/* NUMÉRO */
+
+.proposition-numero {
+
+    flex-shrink: 0;
+
+    color:
+        rgb(94, 162, 134);
+
+    font-size:
+        clamp(25px, 2.5vw, 38px);
+
+    font-weight:
+        700;
+}
+
+
+/* CONTENU */
+
+.proposition-contenu {
+
+    min-width: 0;
+}
+
+
+.proposition h3 {
+
+    margin:
+        0
+        0
+        8px;
+
+    color:
+        rgb(39, 91, 71);
+
+    font-size:
+        clamp(18px, 1.5vw, 22px);
+}
+
+
+.proposition p {
+
+    margin: 0;
+
+    color:
+        rgb(53, 56, 68);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.55;
+}
+
+
+
+/* =====================================================
+   BLOC FINAL
+   ===================================================== */
+
+.actions-conclusion {
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin:
+        45px
+        auto
+        0;
+
+    padding:
+        28px
+        35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgb(222, 239, 230),
+            rgb(244, 250, 247)
+        );
+
+    border-radius:
+        18px;
+
+    box-sizing:
+        border-box;
+}
+
+
+.actions-conclusion-icone {
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    color:
+        rgb(65, 139, 109);
+
+    border:
+        2px solid
+        rgb(94, 162, 134);
+
+    border-radius:
+        50%;
+
+    font-size:
+        26px;
+}
+
+
+.actions-conclusion h3 {
+
+    margin:
+        0
+        0
+        8px;
+
+    color:
+        rgb(47, 112, 86);
+
+    font-size:
+        23px;
+}
+
+
+.actions-conclusion p {
+
+    margin: 0;
+
+    color:
+        rgb(53, 56, 68);
+
+    line-height:
+        1.55;
+}
+
+
+
+/* =====================================================
+   RESPONSIVE ACTIONS
+   ===================================================== */
+
+@media (max-width: 1100px) {
+
+    .actions-grille {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .actions-section,
+    .actions-propositions {
+
+        padding:
+            40px
+            20px;
+    }
+
+
+    .actions-grille {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .propositions-grille {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .proposition {
+
+        padding:
+            20px;
+    }
+
+
+    .actions-conclusion {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        padding:
+            25px;
+    }
+
+}
 /* =========================
    VERSION TABLETTE / MOBILE/ INDEX
    ========================= */
